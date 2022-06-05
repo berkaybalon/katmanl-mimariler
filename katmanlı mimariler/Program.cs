@@ -2,5 +2,10 @@
 //içlerinde Abstract ve Concrete diye iki klasör açtık.
 //Ürünü Entity'e oluşturuyoruz. Sonra orada Concrete içinde Product adıyla bi class açtık. Sonra Abstract içine IEntity adıyla bir interface ekledik.
 
+using Business.Abstract;
+using Business.Concrete;
+
+IProductService _productService = new ProductManager(new DataAccess.Concrete.Memory.MemoryProductDal();
+
 
 
