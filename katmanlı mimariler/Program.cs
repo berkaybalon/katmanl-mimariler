@@ -5,7 +5,16 @@
 using Business.Abstract;
 using Business.Concrete;
 
-IProductService _productService = new ProductManager(new DataAccess.Concrete.Memory.MemoryProductDal();
+IProductService _productService = new ProductManager(new DataAccess.Concrete.Memory.MemoryProductDal());
+
+var products = _productService.GetAll();
+
+foreach (var product in products)
+
+{
+    Console.WriteLine(product.ProductName);
+
+}
 
 
 
