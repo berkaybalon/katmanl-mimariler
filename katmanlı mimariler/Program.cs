@@ -4,8 +4,9 @@
 
 using Business.Abstract;
 using Business.Concrete;
+using DataAccess.Concrete.Memory;
 
-IProductService _productService = new ProductManager(new DataAccess.Concrete.Memory.MemoryProductDal());
+IProductService _productService = new ProductManager(new MemoryProductDal());
 
 var products = _productService.GetAll();
 
